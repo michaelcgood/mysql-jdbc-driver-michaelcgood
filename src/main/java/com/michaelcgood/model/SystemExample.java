@@ -1,23 +1,23 @@
 package com.michaelcgood.model;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class System {
+@Table(name = "system_example")
+public class SystemExample {
 
 	private String name;
-	private Date lastaudit;
-	public Date getLastaudit() {
+	private String lastaudit;
+	public String getLastaudit() {
 		return lastaudit;
 	}
-	public void setLastaudit(Date lastaudit) {
-		this.lastaudit = lastaudit;
+	public void setLastaudit(String string) {
+		this.lastaudit = string;
 	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
